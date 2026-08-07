@@ -7,6 +7,7 @@
 *.pem
 *.key
 secrets/
+docs/
 
 # Build output
 main

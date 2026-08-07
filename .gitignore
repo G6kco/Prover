@@ -1,0 +1,30 @@
+# Secrets — these must never reach the repository.
+# A committed .env survives in git history even after you delete the file, and
+# public repos are scraped for exactly this within minutes.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets/
+
+# Build output
+main
+main.exe
+prover
+prover.exe
+/bin/
+/dist/
+*.test
+*.out
+
+# Go
+vendor/
+coverage.*
+testdata/fuzz/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

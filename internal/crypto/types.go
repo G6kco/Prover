@@ -1,13 +1,15 @@
 package crypto
 
-import "errors"
+import (
+	"errors"
+)
 
 type Algorithm string
 
 const (
-	KeySize                 = 32
-	NonceSize               = 24
-	SaltSize                = 16
+	KeySize   = 32
+	NonceSize = 24
+	SaltSize  = 16
 	// MinSecretSize is the minimum decoded HOTP/TOTP secret length, in
 	// bytes (80 bits, the floor RFC 4226 recommends).
 	MinSecretSize           = 10

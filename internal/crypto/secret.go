@@ -5,7 +5,6 @@ import (
 	"strings"
 )
 
-
 func DecodeSecret(s string) ([]byte, error) {
 	secret, err := NormalizeSecret(s)
 	if err != nil {
@@ -23,7 +22,6 @@ func DecodeSecret(s string) ([]byte, error) {
 
 	return decoded, nil
 }
-
 
 func NormalizeSecret(s string) (string, error) {
 	secret := strings.ToUpper(s)

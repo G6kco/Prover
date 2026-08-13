@@ -30,5 +30,5 @@ func VerifyAuthKey(ak, salt, stored []byte, p Argon2Params) (bool, error) {
 		return false, err
 	}
 
-	return subtle.ConstantTimeCompare(computed,stored) == 1, nil
+	return subtle.ConstantTimeCompare(computed, stored) == 1, nil
 }

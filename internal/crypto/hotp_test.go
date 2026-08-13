@@ -31,12 +31,12 @@ func TestHOTP_RFC4226(t *testing.T) {
 // the same 20-byte seed. Getting this wrong is the usual reason people think
 // their SHA-256 implementation is broken.
 func TestTOTP_RFC6238(t *testing.T) {
-	seed1 := []byte("12345678901234567890")                                     // 20 bytes
-	seed256 := []byte("12345678901234567890123456789012")                       // 32 bytes
+	seed1 := []byte("12345678901234567890")                                               // 20 bytes
+	seed256 := []byte("12345678901234567890123456789012")                                 // 32 bytes
 	seed512 := []byte("1234567890123456789012345678901234567890123456789012345678901234") // 64 bytes
 
 	cases := []struct {
-		unix              int64
+		unix                 int64
 		sha1, sha256, sha512 string
 	}{
 		{59, "94287082", "46119246", "90693936"},

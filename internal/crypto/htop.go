@@ -42,6 +42,6 @@ func HOTP(key []byte, counter uint64, digits int, alg Algorithm) (string, error)
 
 	mod := uint32(math.Pow10(digits))
 	code := binCode % mod
-	
-	return fmt.Sprintf("%0*d",digits,code), nil
+
+	return fmt.Sprintf("%0*d", digits, code), nil
 }

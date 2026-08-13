@@ -2,7 +2,6 @@ package crypto
 
 import "crypto/rand"
 
-
 func Random(n int) ([]byte, error) {
 	if n <= 0 {
 		return nil, ErrInvalidKeySize
